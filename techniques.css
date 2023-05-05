@@ -1,0 +1,268 @@
+/*navbar end*/
+@media screen and (max-width:990px) {
+    .nav-item .nav-link::before,
+    .nav-item .nav-link::after{
+         display: none;} 
+    .dropdown{
+        max-height: 200px;
+        border: none;
+        }
+
+}
+
+
+
+#sticky{
+    position:-webkit-sticky;
+    position:sticky ;
+    background-color:rgb(200, 231, 243);
+    margin-top: 0px;
+}
+
+/*navbar end*/
+.nav-item .nav-link{
+    transition: 1s;
+    position: relative;
+    margin: 3px;
+}
+.nav-item .nav-link::before,
+.nav-item .nav-link::after{
+    content: '';
+    width: 55px;
+    height: 25px;
+    position: absolute;
+    transition: all .3s ease;
+    opacity: 0;
+}
+.nav-item .nav-link::before{
+    content: '';
+    right: 0;
+    top: 0;
+    border-top: 2px solid skyblue;
+    border-right: 2px solid skyblue;
+    transform: translate(-100% , 50%);
+}
+.nav-item .nav-link::after{
+    content: '';
+    left: 0;
+    bottom: 0;
+    border-bottom: 2px solid skyblue;
+    border-left: 2px solid skyblue;
+    transform: translate(100% , -50%);
+}
+.nav-item .nav-link:hover:before,
+.nav-item .nav-link:hover:after{
+    transform: translate(0,0);
+    opacity: 1;
+}
+.nav-item .nav-link:hover{
+    color: skyblue;
+}
+.dropdown{
+    display: none;
+    position: absolute;
+    text-align: center;
+    background-color:white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    max-height: 200px;
+    padding:20px;
+line-height:50px;
+    transition: 1s;
+    z-index: 1;
+  }
+  .dropdown li {
+    list-style-type: none;
+   }
+   .dropdown li a {
+text-decoration: none;
+color: black;
+   }
+  .dropdown li a:hover{
+    font-weight: bolder;
+    color: skyblue;
+  }
+.dropbtn:hover .dropdown{
+    display: block;
+}
+
+
+
+
+#card{
+   margin-top: 300px;margin-left: 180px;
+    height: 400px;width: 300px;
+    transform: translate(-50% , -50%);
+    transform-style: preserve-3d;
+    perspective: 600px;
+    transition: 0.5s;
+    border: 2px solid skyblue;
+}
+
+ .card-front{
+    height: 100%;
+    width: 100%;
+    background-image: url(images/8072522896a94e310ae75404583541c2.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    position: absolute;
+    top: 0;left: 0;
+    backface-visibility: hidden;
+    transform: rotateX(0deg);
+    transition: 0.5s;
+}
+
+.card-back{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: skyblue;
+    backface-visibility: hidden;
+    transform: rotateX(180deg);
+    transition: 0.7s;
+    color: black;
+    text-align: center;
+}
+#card:hover .card-front{
+    transform: rotateX(-180deg);
+}
+#card:hover .card-back{
+    transform: rotateX(0deg);
+}
+ .card-back h2{
+   background-color: white;
+   border-radius: 30px 0px 30px 0px;
+   padding: 15px 0px;
+   font-size: 30px;
+}
+.card-back h2 span{
+    font-size: 20px;
+}
+.card-back .content p{
+margin-top: 10px;
+text-align: justify;
+padding: 0 40px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*footer*/
+footer{
+    width: 100%;
+    position: absolute;
+    background:linear-gradient(skyblue, white);
+    color: black;
+    padding: 60px 0 10px;
+    font-size: 13px;
+    line-height: 18px;
+    border-top-left-radius: 80px;
+  }
+  .footer-row{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .col{
+    flex-basis: 25%;
+    padding: 15px;
+  }
+  .col h1{
+    color: rgb(24, 174, 233);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  .col h1 span{
+    color:grey;
+    font-size: 30px;
+  font-family:'Courier New', Courier, monospace;
+  }
+  .col h3{
+     margin-bottom: 40px;
+    position: relative;
+    font-size: 20px;
+    width: 250px;
+  }
+  .col ul li{
+    list-style: none;
+    margin-bottom: 12px;
+     }
+  .col ul li a{
+    text-decoration: none;
+    transition: 1s;
+    color: black;
+  }
+  .col ul li a:hover{
+    color:blue;
+     }
+  .social-links .fa-brands{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: black;
+    background: rgb(172, 170, 170);
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  .underline{
+    width:100px;
+    height: 5px;
+    background: grey;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 20;
+  }
+  .underline span{
+    width: 15px;
+    height: 100%;
+    background: white;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left:20px;
+    animation: moving 2s linear infinite;
+  }
+  @keyframes moving {
+    0%{
+        left: 0px;
+    }
+    100%{
+        left: 80px;
+    }
+  }
+  @media screen and(max-width:700px) {
+    footer{
+      bottom: unset;
+    }
+    .col{
+  flex-basis: 100%;
+    }
+  }
